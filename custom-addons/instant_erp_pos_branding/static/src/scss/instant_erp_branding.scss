@@ -1,0 +1,219 @@
+// instant-ERP POS Branding Styles for Odoo 17.0
+// ================================================
+
+// Brand Colors
+$instant-primary: #2563eb;      // Blue
+$instant-secondary: #7c3aed;    // Purple
+$instant-accent: #f59e0b;       // Orange/Gold
+$instant-success: #10b981;      // Green
+$instant-dark: #1e293b;         // Dark gray
+
+// ============================================
+// Navbar Branding
+// ============================================
+
+.pos-topheader {
+    // Optional: Add gradient background to navbar
+    // Uncomment if you want colored navbar
+    // background: linear-gradient(135deg, $instant-primary 0%, $instant-secondary 100%) !important;
+
+    .instant-erp-logo {
+        max-height: 50px;
+        width: auto;
+        object-fit: contain;
+        cursor: pointer;
+        transition: transform 0.3s ease, filter 0.3s ease;
+
+        &:hover {
+            transform: scale(1.05);
+            filter: brightness(1.1);
+        }
+    }
+}
+
+// ============================================
+// Receipt Branding
+// ============================================
+
+.pos-receipt {
+
+    // Header styling
+    .instant-erp-receipt-header {
+        border-bottom: 2px solid $instant-primary;
+        padding-bottom: 10px;
+        margin-bottom: 15px;
+
+        .instant-erp-receipt-logo {
+            max-width: 180px;
+            margin: 0 auto 10px;
+            display: block;
+        }
+
+        .instant-erp-header-text {
+            font-size: 14px;
+            line-height: 1.5;
+            color: $instant-dark;
+            font-weight: 500;
+        }
+
+        .instant-erp-separator {
+            margin-top: 10px;
+            color: $instant-primary;
+        }
+    }
+
+    // "Powered by instant-ERP" styling
+    .instant-erp-powered-by {
+        color: $instant-primary;
+        font-weight: 700;
+        font-size: 1.1em;
+        margin: 10px 0;
+    }
+
+    // Footer styling
+    .instant-erp-footer {
+        border-top: 2px solid $instant-primary;
+        padding-top: 10px;
+
+        .instant-erp-separator {
+            color: $instant-primary;
+            margin-bottom: 5px;
+        }
+
+        .instant-erp-footer-text {
+            font-size: 13px;
+            line-height: 1.6;
+            color: $instant-secondary;
+            font-weight: 500;
+
+            p {
+                margin: 3px 0;
+            }
+        }
+    }
+}
+
+// ============================================
+// Optional: Custom Button Styling
+// ============================================
+
+// Uncomment to apply instant-ERP colors to POS buttons
+/*
+.pos-content {
+    .btn-primary {
+        background: linear-gradient(135deg, $instant-primary, $instant-secondary);
+        border: none;
+        color: white;
+        transition: all 0.3s ease;
+
+        &:hover {
+            background: linear-gradient(135deg,
+                darken($instant-primary, 8%),
+                darken($instant-secondary, 8%)
+            );
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba($instant-primary, 0.4);
+        }
+
+        &:active {
+            transform: translateY(0);
+        }
+    }
+
+    .btn-secondary {
+        background-color: $instant-secondary;
+        border-color: $instant-secondary;
+
+        &:hover {
+            background-color: darken($instant-secondary, 8%);
+            border-color: darken($instant-secondary, 8%);
+        }
+    }
+
+    .btn-success {
+        background-color: $instant-success;
+        border-color: $instant-success;
+
+        &:hover {
+            background-color: darken($instant-success, 8%);
+            border-color: darken($instant-success, 8%);
+        }
+    }
+}
+*/
+
+// ============================================
+// Optional: Product Card Branding
+// ============================================
+
+// Uncomment to apply instant-ERP styling to product cards
+/*
+.product-screen {
+    .product-list {
+        .product {
+            border-radius: 12px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+
+            &:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 10px 25px rgba($instant-primary, 0.15);
+                border-color: $instant-primary;
+            }
+
+            &.selected {
+                border: 2px solid $instant-primary;
+                background-color: rgba($instant-primary, 0.05);
+            }
+
+            .product-name {
+                color: $instant-dark;
+                font-weight: 600;
+            }
+
+            .product-price {
+                color: $instant-primary;
+                font-weight: 700;
+            }
+        }
+    }
+}
+*/
+
+// ============================================
+// Optional: Payment Screen Styling
+// ============================================
+
+// Uncomment for custom payment screen colors
+/*
+.payment-screen {
+    .paymentline {
+        &.selected {
+            background-color: rgba($instant-primary, 0.1);
+            border-left: 4px solid $instant-primary;
+        }
+    }
+
+    .payment-status-total {
+        color: $instant-primary;
+        font-weight: bold;
+    }
+}
+*/
+
+// ============================================
+// Print-Specific Styles
+// ============================================
+
+@media print {
+    .instant-erp-receipt-header,
+    .instant-erp-footer {
+        .instant-erp-separator {
+            color: #000 !important;
+        }
+    }
+
+    .instant-erp-powered-by {
+        color: #000 !important;
+    }
+}

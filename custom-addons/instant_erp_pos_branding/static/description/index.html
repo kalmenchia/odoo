@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>instant-ERP POS Branding</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        .container {
+            background: white;
+            border-radius: 10px;
+            padding: 40px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+        h1 {
+            color: #2563eb;
+            border-bottom: 3px solid #7c3aed;
+            padding-bottom: 10px;
+        }
+        h2 {
+            color: #7c3aed;
+            margin-top: 30px;
+        }
+        .feature {
+            background: #f8f9fa;
+            padding: 15px;
+            margin: 10px 0;
+            border-left: 4px solid #2563eb;
+            border-radius: 5px;
+        }
+        .feature strong {
+            color: #2563eb;
+        }
+        .warning {
+            background: #fff3cd;
+            border-left: 4px solid #f59e0b;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+        .success {
+            background: #d1fae5;
+            border-left: 4px solid #10b981;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+        code {
+            background: #f4f4f4;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+        }
+        .logo {
+            text-align: center;
+            margin: 30px 0;
+        }
+        .btn {
+            display: inline-block;
+            padding: 12px 24px;
+            background: linear-gradient(135deg, #2563eb, #7c3aed);
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            margin: 5px;
+        }
+        .btn:hover {
+            background: linear-gradient(135deg, #1d4ed8, #6d28d9);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            <h1>⚡ instant-ERP POS Branding</h1>
+            <p style="font-size: 1.2em; color: #666;">
+                Complete Rebranding Solution for Odoo 17.0 Point of Sale
+            </p>
+        </div>
+
+        <div class="success">
+            <strong>✅ Installation Successful!</strong><br>
+            Your POS is now branded with instant-ERP. Open the Point of Sale to see the changes.
+        </div>
+
+        <h2>🎯 Features</h2>
+
+        <div class="feature">
+            <strong>Replace Odoo Logo</strong><br>
+            instant-ERP logo appears in the POS navbar instead of Odoo logo
+        </div>
+
+        <div class="feature">
+            <strong>Custom Receipts</strong><br>
+            Removes "Powered by Odoo" and adds instant-ERP branding to all receipts
+        </div>
+
+        <div class="feature">
+            <strong>Configurable Text</strong><br>
+            Customize receipt header and footer text per POS configuration
+        </div>
+
+        <div class="feature">
+            <strong>No Core Modifications</strong><br>
+            100% inheritance-based - safe for Odoo upgrades
+        </div>
+
+        <div class="feature">
+            <strong>Custom Logos</strong><br>
+            Upload your own logos per company
+        </div>
+
+        <h2>🚀 Quick Start</h2>
+
+        <ol>
+            <li><strong>Open POS:</strong> Navigate to Point of Sale → Dashboard → New Session</li>
+            <li><strong>Verify Branding:</strong> Check that instant-ERP logo appears in navbar</li>
+            <li><strong>Test Receipt:</strong> Make a test order and print receipt</li>
+            <li><strong>Configure:</strong> Customize settings in POS Configuration</li>
+        </ol>
+
+        <h2>⚙️ Configuration</h2>
+
+        <p><strong>POS Settings:</strong> Point of Sale → Configuration → Point of Sale → [Your POS]</p>
+        <p>Look for the <strong>instant-ERP Branding</strong> section to:</p>
+        <ul>
+            <li>Enable/disable instant-ERP branding</li>
+            <li>Set custom receipt header text</li>
+            <li>Set custom receipt footer text</li>
+        </ul>
+
+        <p><strong>Company Logos:</strong> Settings → Companies → [Your Company]</p>
+        <ul>
+            <li>Upload custom instant-ERP POS Logo (for navbar)</li>
+            <li>Upload custom instant-ERP Receipt Logo (for receipts)</li>
+        </ul>
+
+        <h2>📋 What Changed?</h2>
+
+        <ul>
+            <li>✅ POS navbar logo replaced with instant-ERP</li>
+            <li>✅ Receipt header includes instant-ERP logo and custom text</li>
+            <li>✅ "Powered by Odoo" replaced with "Powered by instant-ERP"</li>
+            <li>✅ Custom footer text on all receipts</li>
+            <li>✅ Optional: instant-ERP color scheme (configurable in SCSS)</li>
+        </ul>
+
+        <div class="warning">
+            <strong>⚠️ Important:</strong> This module uses inheritance only. No core Odoo files were modified.
+            You can safely upgrade Odoo without losing these customizations.
+        </div>
+
+        <h2>🛠️ Customization</h2>
+
+        <p>Advanced users can further customize:</p>
+
+        <ul>
+            <li><strong>Brand Colors:</strong> Edit <code>static/src/scss/instant_erp_branding.scss</code></li>
+            <li><strong>Logos:</strong> Replace images in <code>static/src/img/</code></li>
+            <li><strong>Templates:</strong> Modify XML files in <code>static/src/app/overrides/</code></li>
+        </ul>
+
+        <p>After changes, restart Odoo and clear browser cache.</p>
+
+        <h2>📚 Documentation</h2>
+
+        <p>For detailed documentation, see:</p>
+        <ul>
+            <li><code>custom-addons/instant_erp_pos_branding/README.md</code></li>
+            <li><code>17-pos-customization-proposal.md</code> (root directory)</li>
+        </ul>
+
+        <h2>🆘 Troubleshooting</h2>
+
+        <p><strong>Logo not showing?</strong></p>
+        <ul>
+            <li>Clear browser cache (Ctrl+Shift+R)</li>
+            <li>Close and reopen POS session</li>
+            <li>Check that module is installed (not just downloaded)</li>
+        </ul>
+
+        <p><strong>Receipt still shows Odoo branding?</strong></p>
+        <ul>
+            <li>Update module: <code>./odoo-bin -u instant_erp_pos_branding -d your_database</code></li>
+            <li>Clear POS cache in browser</li>
+            <li>Restart Odoo service</li>
+        </ul>
+
+        <h2>📞 Support</h2>
+
+        <p>For support or questions:</p>
+        <ul>
+            <li>Review the included documentation</li>
+            <li>Check Odoo logs: <code>/var/log/odoo/odoo-server.log</code></li>
+            <li>Visit: <a href="https://www.instant-erp.com">www.instant-erp.com</a></li>
+        </ul>
+
+        <div style="text-align: center; margin-top: 40px; padding-top: 20px; border-top: 2px solid #e5e5e5;">
+            <p style="color: #666;">
+                <strong>instant-ERP POS Branding</strong><br>
+                Version 17.0.1.0.0 for Odoo 17.0<br>
+                © 2025 instant-ERP Development Team
+            </p>
+            <a href="https://www.instant-erp.com" class="btn">Visit instant-ERP.com</a>
+        </div>
+    </div>
+</body>
+</html>

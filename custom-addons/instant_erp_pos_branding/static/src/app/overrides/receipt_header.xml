@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+
+    <!-- Add instant-ERP branding to receipt header -->
+    <t t-inherit="point_of_sale.ReceiptHeader" t-inherit-mode="extension">
+
+        <!-- Add instant-ERP header before company logo -->
+        <xpath expr="//img[@class='pos-receipt-logo']" position="before">
+            <div t-if="props.data.instant_erp_header" class="instant-erp-receipt-header text-center mb-3">
+                <div class="instant-erp-header-logo mb-2">
+                    <img src="/instant_erp_pos_branding/static/src/img/instant_erp_receipt_logo.png"
+                         alt="instant-ERP"
+                         class="instant-erp-receipt-logo"
+                         style="max-width: 180px; margin: 0 auto; display: block;"/>
+                </div>
+                <div class="instant-erp-header-text" style="white-space: pre-line;">
+                    <t t-esc="props.data.instant_erp_header"/>
+                </div>
+                <div class="instant-erp-separator">--------------------------------</div>
+            </div>
+        </xpath>
+
+    </t>
+
+</templates>

@@ -1,0 +1,24 @@
+PLACEHOLDER FOR LOGO IMAGES
+
+Please replace these placeholder files with your actual instant-ERP logos:
+
+1. instant_erp_logo.png
+   - Size: 150x50 pixels (recommended)
+   - Format: PNG with transparency
+   - Usage: Displays in POS navbar (top left)
+
+2. instant_erp_receipt_logo.png
+   - Size: 300x100 pixels (recommended)
+   - Format: PNG
+   - Usage: Displays on printed receipts
+
+These placeholder files will work for testing, but you should replace them
+with your actual instant-ERP branded logos before production use.
+
+To replace:
+1. Save your logo files with the exact names above
+2. Place them in this directory (static/src/img/)
+3. Restart Odoo
+4. Clear browser cache
+
+The module will automatically use your custom logos.
