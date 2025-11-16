@@ -8,17 +8,21 @@
         <field name="inherit_id" ref="point_of_sale.pos_config_view_form"/>
         <field name="arch" type="xml">
 
-            <!-- Add instant-ERP branding section after receipt settings -->
-            <xpath expr="//group[@name='receipts']" position="after">
-                <group string="instant-ERP Branding" name="instant_erp_branding" colspan="4">
+            <!-- Add instant-ERP branding section in settings container -->
+            <xpath expr="//div[@class='row mt16 o_settings_container']" position="inside">
+                <setting string="instant-ERP Branding" help="Customize your POS with instant-ERP branding">
                     <field name="enable_instant_erp_branding"/>
-                    <field name="instant_erp_receipt_header"
-                           widget="text"
-                           attrs="{'invisible': [('enable_instant_erp_branding', '=', False)]}"/>
-                    <field name="instant_erp_receipt_footer"
-                           widget="text"
-                           attrs="{'invisible': [('enable_instant_erp_branding', '=', False)]}"/>
-                </group>
+                    <div class="content-group mt16" attrs="{'invisible': [('enable_instant_erp_branding', '=', False)]}">
+                        <div class="row">
+                            <label for="instant_erp_receipt_header" string="Receipt Header Text" class="col-lg-3 o_light_label"/>
+                            <field name="instant_erp_receipt_header" widget="text" class="oe_inline"/>
+                        </div>
+                        <div class="row">
+                            <label for="instant_erp_receipt_footer" string="Receipt Footer Text" class="col-lg-3 o_light_label"/>
+                            <field name="instant_erp_receipt_footer" widget="text" class="oe_inline"/>
+                        </div>
+                    </div>
+                </setting>
             </xpath>
 
         </field>
