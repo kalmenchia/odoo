@@ -47,6 +47,7 @@
         'point_of_sale',
     ],
     'data': [
+        'security/ir.model.access.csv',
         'views/pos_config_views.xml',
     ],
     'assets': {
@@ -65,8 +66,8 @@
     },
     'images': [
         'static/description/icon.png',
-        'static/src/img/instant_erp_logo.png',
-        'static/src/img/instant_erp_receipt_logo.png',
+        'static/src/img/instant_erp_logo.svg',
+        'static/src/img/instant_erp_receipt_logo.svg',
     ],
     'installable': True,
     'application': False,

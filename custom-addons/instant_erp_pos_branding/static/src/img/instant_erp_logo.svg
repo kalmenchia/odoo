@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="150" height="50" viewBox="0 0 150 50" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="150" height="50" fill="#2563eb" rx="4"/>
+
+  <!-- Lightning bolt icon -->
+  <path d="M25 10 L30 25 L22 25 L27 40 L15 25 L23 25 Z" fill="#f59e0b" stroke="#fff" stroke-width="0.5"/>
+
+  <!-- Text: instant-ERP -->
+  <text x="40" y="20" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#ffffff">
+    instant
+  </text>
+  <text x="40" y="35" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#f59e0b">
+    ERP
+  </text>
+
+  <!-- Decorative line -->
+  <line x1="40" y1="23" x2="80" y2="23" stroke="#7c3aed" stroke-width="1"/>
+</svg>

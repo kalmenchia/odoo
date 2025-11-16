@@ -4,8 +4,8 @@
     <!-- Replace Odoo logo with instant-ERP logo in POS navbar -->
     <t t-inherit="point_of_sale.Navbar" t-inherit-mode="extension">
 
-        <!-- Replace the logo image -->
-        <xpath expr="//img[@alt='Logo']" position="replace">
+        <!-- Replace the logo image - using precise XPath to target the exact element -->
+        <xpath expr="//div[@class='pos-branding d-flex justify-content-start flex-grow-1 h-100 p-0 my-0 text-start']/img" position="replace">
             <img class="pos-logo h-75 ms-3 me-auto align-self-center instant-erp-logo"
                  t-att-src="instantErpLogoUrl"
                  t-on-click="() => debug.toggleWidget()"
