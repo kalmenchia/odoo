@@ -67,4 +67,64 @@ patch(Navbar.prototype, {
             return '/instant_erp_pos_branding/static/src/img/instant_erp_receipt_logo.svg';
         }
     },
+
+    /**
+     * Check if current user has Administration / Settings access
+     *
+     * Checks if the user belongs to the base.group_system group which grants
+     * Administration / Settings access in Odoo.
+     *
+     * The is_admin_user flag is set server-side in pos_session.py by checking
+     * if the user has base.group_system access.
+     *
+     * @returns {boolean} True if user has admin access
+     */
+    hasAdminAccess() {
+        try {
+            const user = this.pos?.user;
+            if (!user) {
+                return false;
+            }
+
+            // Check the is_admin_user flag set by our pos_session.py override
+            // This flag is set server-side using has_group('base.group_system')
+            if (user.is_admin_user === true) {
+                return true;
+            }
+
+            // Default to false (no access) for security
+            return false;
+
+        } catch (error) {
+            console.warn('instant-ERP: Error checking admin access, denying access', error);
+            return false;
+        }
+    },
+
+    /**
+     * Handle logo click - toggle debug widget only for admin users
+     *
+     * This method checks if the current user has Administration/Settings access
+     * before allowing them to toggle the debug widget. Regular POS users (cashiers)
+     * will not be able to access the debug widget.
+     */
+    onLogoClick() {
+        try {
+            if (this.hasAdminAccess()) {
+                // User has admin access - allow debug widget
+                this.debug.toggleWidget();
+            } else {
+                // User doesn't have admin access - show friendly message
+                console.info('instant-ERP: Debug widget is restricted to administrators');
+
+                // Optionally, you could show a subtle notification here
+                // this.pos.env.services.notification.add(
+                //     'Debug access is restricted to administrators',
+                //     { type: 'info' }
+                // );
+            }
+        } catch (error) {
+            console.warn('instant-ERP: Error handling logo click', error);
+        }
+    },
 });

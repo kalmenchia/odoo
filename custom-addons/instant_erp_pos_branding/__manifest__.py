@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 {
     'name': 'instant-ERP POS Branding',
-    'version': '17.0.1.0.0',
+    'version': '17.0.1.1.0',
     'category': 'Sales/Point of Sale',
     'sequence': 20,
     'summary': 'Rebrand Odoo POS to instant-ERP',
@@ -18,6 +18,7 @@
         - Add instant-ERP branding to receipt headers and footers
         - Custom instant-ERP color scheme and styling
         - Optional custom receipt header text per POS configuration
+        - Debug widget access restricted to Administration/Settings users only
         - Uses inheritance only - no core file modifications
         - Fully compatible with Odoo upgrades
 
