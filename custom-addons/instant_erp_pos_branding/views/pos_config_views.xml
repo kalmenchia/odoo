@@ -12,7 +12,7 @@
             <xpath expr="//div[@class='row mt16 o_settings_container']" position="inside">
                 <setting string="instant-ERP Branding" help="Customize your POS with instant-ERP branding">
                     <field name="enable_instant_erp_branding"/>
-                    <div class="content-group mt16" attrs="{'invisible': [('enable_instant_erp_branding', '=', False)]}">
+                    <div class="content-group mt16" invisible="not enable_instant_erp_branding">
                         <div class="row">
                             <label for="instant_erp_receipt_header" string="Receipt Header Text" class="col-lg-3 o_light_label"/>
                             <field name="instant_erp_receipt_header" widget="text" class="oe_inline"/>
